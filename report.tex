@@ -1,0 +1,71 @@
+\documentclass[12pt, a4paper, twoside]{article}
+
+\usepackage[dutch]{babel}
+\usepackage{hvaTemplate}
+% \usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,noabbrev,dutch]{cleveref}
+\usepackage{csquotes}
+\usepackage[backend=biber, style=ieee]{biblatex}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{makecell}
+\usepackage[perpage]{footmisc}
+\sisetup{detect-all}
+
+
+\pgfplotsset{compat=1.18}
+
+\DeclareMathOperator\erfc{erfc}
+\DeclareMathOperator\inverfc{inverfc}
+
+\addbibresource{references.bib}
+
+\setAuthor{
+    \\Group
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{ll}
+            Student 1  & (5008xxxxxx)\\ 
+            Student 2  & (5008xxxxxx)
+        \end{tabular}
+    \end{table}
+}
+\extraInfo{EXTRA INFO}
+\setTitle{Empty title}
+
+
+
+\makeatletter
+\providecommand\add@text{}
+\newcommand\tagaddtext[1]{%
+\gdef\add@text{#1\gdef\add@text{}}}% 
+\renewcommand\tagform@[1]{%
+  \maketag@@@{\llap{\add@text\quad}(\ignorespaces#1\unskip\@@italiccorr)}%
+}
+\makeatother
+  
+\begin{document}
+    \makeTitlepage
+
+    \onecolumn
+    \tableofcontents
+
+    \newpage	
+    % To add a section place a section .tex file in the sections folder and then add it here. 
+    %\input{sections/section1}
+    %\newpage
+
+    \printbibliography[heading=bibintoc]
+
+
+    \newpage
+    % To add an appendix uncomment the following line	
+    %\appendix
+    %\newpage
+    %\input{sections/someAppendix}    
+\end{document}
+
