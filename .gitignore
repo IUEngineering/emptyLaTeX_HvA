@@ -24,3 +24,9 @@
 *.toc
 *.nav
 *.snm
+*.pdf
+*.ist
+*.acn
+# To be able to have .pdf files in both logo and img dir.
+!logos/*
+!img/*

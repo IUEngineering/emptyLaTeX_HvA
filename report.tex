@@ -16,6 +16,24 @@
 \usepackage[perpage]{footmisc}
 \sisetup{detect-all}
 
+% Add SI \bar as it's been removed from SI :(
+\DeclareSIUnit\bar{bar}
+\pgfplotsset{compat=1.18}
+
+% Voor refereren naar deelvragen:
+\crefalias{enumi}{question}
+\crefname{question}{deelvraag}{deelvragen}
+\Crefname{question}{Deelvraag}{Deelvragen}
+
+% Voeg afkortingen toe
+\RequirePackage[acronym, toc, nonumberlist]{glossaries}
+\makeglossaries
+
+% Voor hoofdstuk inplaats van paragraaf bij \cref
+\crefalias{section}{chapter}
+\crefname{chapter}{hoofdstuk}{hoofdstukken}
+\Crefname{chapter}{Hoofdstuk}{Hoofdstukken}
+
 
 \pgfplotsset{compat=1.18}
 

@@ -44,7 +44,7 @@
 			\rule{\linewidth}{0.5mm}\\[1.5cm]
 
 			\noindent
-			\emph{Auteurs:} 
+			\emph{Auteurs:}
 			\@docAuthor
 			\\[10cm]
 			Datum: \today
@@ -69,7 +69,7 @@
 	\mbox{}
     \vfill
     \noindent
-	\copyright 2024 Copyright
+	\copyright 2025 Copyright
 
 	\noindent
 	Alle rechten voorbehouden. Niets uit dit verslag mag worden verveelvoudigd, 
@@ -157,7 +157,7 @@
 %	firstnumber		= \lst@firstline
 %}
 
-\usepackage{titlesec}
+\RequirePackage{titlesec}
 
 \setcounter{secnumdepth}{4}
 
@@ -165,3 +165,29 @@
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}
 {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+\RequirePackage{parskip}
+
+% Added \chem to remove slanted math letters. 
+\newcommand*\chem[1]{\ensuremath{\mathrm{#1}}}
+% Added \MWh to have MWh with proper spacing
+\newcommand*\MWh[1]{\SI[inter-unit-product={}  
+]{#1}{\mega\watt\hour}}
+% Added \pRange to have a range of values in %
+\newcommand*\pRange[2]{\qtyrange[range-phrase = --, range-units = single]{#1}{#2}{\percent}}
+
+\RequirePackage{booktabs}
+
+\RequirePackage{ifsym}
+\RequirePackage{fontawesome5}
+
+% Om sommige dingen te laten passen op een A4 
+% And remove overfilled itemize with max length
+\RequirePackage{enumitem}
+
+% Kijken of dit nuttig is
+\RequirePackage{pgfgantt}
+
+% Tabel op hele breedte van de pagina:
+\RequirePackage{tabularx}
