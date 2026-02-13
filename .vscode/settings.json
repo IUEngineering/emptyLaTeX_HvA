@@ -1,0 +1,12 @@
+{
+    "latex-workshop.latex.autoBuild.interval": 1000,
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/*.aux": true,
+        "**/*.fls": true,
+        "**/*.fdb_latexmk": true
+    },
+    "latex-workshop.latex.outDir": "build",
+}
